@@ -22,5 +22,10 @@ RSpec.describe StringCalculator do
       calc = StringCalculator.new
       expect(calc.add('1,2\n3')).to eq(6)
     end
+
+    it "should return error when negative numbers are passed" do
+      calc = StringCalculator.new
+      expect { calc.add('1,-2,3') }.to raise_error(RuntimeError, "Negative numbers not allowed: -2")
+    end
   end
 end
