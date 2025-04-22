@@ -20,7 +20,7 @@ RSpec.describe StringCalculator do
 
     it 'handles multiple numbers with new line delimeter' do
       calc = StringCalculator.new
-      expect(calc.add("1,2\n3")).to eq(6)
+      expect(calc.add('1,2\n3')).to eq(6)
     end
   end
 end
