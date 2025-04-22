@@ -7,5 +7,15 @@ RSpec.describe StringCalculator do
       calc = StringCalculator.new
       expect(calc.add('')).to eq(0)
     end
+
+    it 'returns the number itself for a single number' do
+      calc = StringCalculator.new
+      expect(calc.add('1')).to eq(1)
+    end
+
+    it 'returns the addition of number if number is separated by comma' do
+      calc = StringCalculator.new
+      expect(calc.add('1,5')).to eq(6)
+    end
   end
 end
